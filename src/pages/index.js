@@ -1,10 +1,10 @@
 import * as React from "react";
 import Banner from "../components/banner";
-import { main } from "../components/index.module.css";
+import * as styles from "../components/index.module.css";
 
 const IndexPage = () => {
   return (
-    <main className={main}>
+    <main>
       <Banner />
       <img
         alt="Gatsby G Logo"
