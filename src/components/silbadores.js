@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { container, gridContainer, photo } from "./silbadores.module.scss";
+import { silbadoresContainer } from "./silbadores.module.scss";
 
 const width = "150px";
 
@@ -148,15 +148,13 @@ const portraits = [
 
 const Silbadores = () => {
   return (
-    <div className={container}>
+    <div className={silbadoresContainer}>
       <h2>Silbadores actuales</h2>
       <p>
         Galería homenaje a los silbadores herreños que mantienen viva esta bella
         tradición
       </p>
-      <div className={gridContainer}>
-        <div className={photo}>{portraits}</div>
-      </div>
+      <div className="p-2">{portraits}</div>
     </div>
   );
 };

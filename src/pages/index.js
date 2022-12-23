@@ -1,7 +1,7 @@
 import * as React from "react";
 import Banner from "../components/banner";
 import Silbadores from "../components/silbadores";
-import { container } from "../components/index.module.css";
+import { container } from "../components/index.module.scss";
 
 const IndexPage = () => {
   return (
