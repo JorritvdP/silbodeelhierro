@@ -1,0 +1,28 @@
+.container {
+  font-family: "Montserrat";
+  padding: 20px;
+
+  h2 {
+    font-size: 50px;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+.grid-container {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+// .photo {
+//   padding: 0.8rem;
+//   padding-right: 30px;
+// }
