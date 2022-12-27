@@ -2,7 +2,7 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { silbadoresContainer } from "./silbadores.module.scss";
 
-const width = "150px";
+const width = "130px";
 
 const portraits = [
   <StaticImage
@@ -142,6 +142,16 @@ const portraits = [
   <StaticImage
     src="../images/Trinidad-Padron-Peraza.jpg"
     alt="Trinidad-Padron-Peraza"
+    width={width}
+  />,
+  <StaticImage
+    src="../images/Epifanio-Zamora-Machin-2.jpg"
+    alt="Epifanio-Zamora-Machin"
+    width={width}
+  />,
+  <StaticImage
+    src="../images/Emiliano-Garcia-Garcia-2.jpg"
+    alt="Emiliano-Garcia-Garcia"
     width={width}
   />,
 ];
