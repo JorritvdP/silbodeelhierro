@@ -1,0 +1,30 @@
+.nav-container{
+  width: 100vw;
+  height: 80px;
+  padding: 8px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  .image {
+    height: 25px;
+    width: 90px;
+    align-self: center;
+  }
+}
+
+.links{
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  ul{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+
+    li{
+      display: inline;
+      padding: 3px;
+    }
+  }
+}
