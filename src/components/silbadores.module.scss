@@ -17,15 +17,7 @@
   }
 }
 
-// .grid-container {
-//   display: grid;
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   grid-gap: 1rem 1rem;
-//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-// }
-
-// .photo {
-//   padding: 0.8rem;
-//   padding-right: 30px;
-// }
+.silbador{
+  flex-basis: calc(10% - 10px);
+  margin: 10px;
+}
