@@ -11,10 +11,10 @@ const Navigationbar = () => {
       <div className={links}>
         <ul>
           <li>
-            <a>Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a>Contacto</a>
+            <a href="#">Contacto</a>
           </li>
           {/* <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
