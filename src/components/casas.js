@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { casasContainer } from "./casas.module.scss";
+import { casasContainer, slider } from "./casas.module.scss";
 
 const width = "150px";
 
@@ -31,6 +31,7 @@ const Casas = () => {
         Descubre las tradicionales casas de roca volcánica con techados de
         madera de sabina.
       </p>
+      <div className={slider}>{CasaImagenes}</div>
     </div>
   );
 };
