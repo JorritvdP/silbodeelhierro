@@ -2,6 +2,7 @@ import * as React from "react";
 import Banner from "../components/banner";
 import Silbadores from "../components/silbadores";
 import Navigationbar from "../components/navigationbar";
+import Casas from "../components/casas";
 import { container } from "../components/index.module.scss";
 
 const IndexPage = () => {
@@ -11,6 +12,7 @@ const IndexPage = () => {
       <Banner />
       <div className={container}>
         <Silbadores />
+        <Casas />
       </div>
     </main>
   );
