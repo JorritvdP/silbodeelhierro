@@ -3,6 +3,8 @@ import Banner from "../components/banner";
 import Silbadores from "../components/silbadores";
 import Navigationbar from "../components/navigationbar";
 import Casas from "../components/casas";
+import Testimonios from "../components/testimonios";
+import Colaboracion from "../components/colaboracion";
 import { container } from "../components/index.module.scss";
 
 const IndexPage = () => {
@@ -13,6 +15,8 @@ const IndexPage = () => {
       <div className={container}>
         <Silbadores />
         <Casas />
+        <Testimonios />
+        <Colaboracion />
       </div>
     </main>
   );
