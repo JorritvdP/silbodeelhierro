@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 import {
   navContainer,
   image,
@@ -11,11 +12,7 @@ const Navigationbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY >= 420) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+    window.scrollY >= 380 ? setScrolled(true) : setScrolled(false);
   };
 
   useEffect(() => {
@@ -31,13 +28,13 @@ const Navigationbar = () => {
       <div className={links}>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/">Quiénes Somos</a>
+            <Link to="/">Quiénes Somos</Link>
           </li>
           <li>
-            <a href="/">Contacto</a>
+            <Link to="/">Contacto</Link>
           </li>
           {/* <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
