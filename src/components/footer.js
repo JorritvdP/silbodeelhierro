@@ -4,7 +4,7 @@ import { footerContainer, footerLinks, footerText } from "./footer.module.scss";
 const Footer = () => {
   return (
     <div className={footerContainer}>
-      <div className="footerText">
+      <div className={footerText}>
         <p>
           Síguenos en nuestras redes sociales para estar al corriente de todas
           las novedades
