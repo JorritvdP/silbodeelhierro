@@ -5,6 +5,7 @@ import Navigationbar from "../components/navigationbar";
 import Casas from "../components/casas";
 import Testimonios from "../components/testimonios";
 import Colaboracion from "../components/colaboracion";
+import Footer from "../components/footer";
 import { container } from "../components/index.module.scss";
 
 const IndexPage = () => {
@@ -18,6 +19,7 @@ const IndexPage = () => {
         <Testimonios />
         <Colaboracion />
       </div>
+      <Footer />
     </main>
   );
 };
