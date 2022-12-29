@@ -1,10 +1,30 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { navContainer, image, links } from "./navigationbar.module.scss";
+import {
+  navContainer,
+  image,
+  links,
+  scroll,
+} from "./navigationbar.module.scss";
 
 const Navigationbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 420) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+  });
+
   return (
-    <div className={navContainer}>
+    <div className={scrolled ? navContainer : scroll}>
       <div className={image}>
         <StaticImage src="../images/silbo_typo_logo.png" />
       </div>
@@ -14,7 +34,10 @@ const Navigationbar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <a href="/">Quiénes Somos</a>
+          </li>
+          <li>
+            <a href="/">Contacto</a>
           </li>
           {/* <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
