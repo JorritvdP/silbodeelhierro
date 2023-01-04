@@ -42,19 +42,19 @@ module.exports = {
         // allows a fallback url if WPGRAPHQL_URL is not set in the env, this may be a local or remote WP instance.
       },
     },
-    {
-      resolve: `gatsby-source-facebook-graphql`,
-      options: {
-        // Facebook account or page ID
-        pageId: 10209419148713714,
-        params: {
-          fields: ["id", "name", "posts{object_id,full_picture,description}"],
-        },
-        // Access Token from facebook
-        accessToken:
-          // "EAAGsy4jkkJIBALCJSdBH95TVkhevHG1LQhIPDNquYrmSlyMe3VtZCuzvZBIXq0JaWOf0DGSm1dKHfDZAdu81pR5ZBINGP1UMV2Wf9KVqmldnLUbVXx6r9h1UWZBqsZCyYdpFnwGZCC6deA42rX5nVYMgzx1EHPxf22VhMbFw0HmKTcvyIRmH120bntUuGQEjLZAXS6kROt0ZC46yEtl1yqnUag3PhouXY4itLCdyfDyWu8w14X7sm5Jdc",
-        // process.env.GATSBY_FACEBOOK_GRAPH_TOKEN,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-facebook-graphql`,
+    //   options: {
+    //     // Facebook account or page ID
+    //     pageId: 10209419148713714,
+    //     params: {
+    //       fields: ["id", "name", "posts{object_id,full_picture,description}"],
+    //     },
+    //     // Access Token from facebook
+    //     accessToken:
+    //       // "EAAGsy4jkkJIBALCJSdBH95TVkhevHG1LQhIPDNquYrmSlyMe3VtZCuzvZBIXq0JaWOf0DGSm1dKHfDZAdu81pR5ZBINGP1UMV2Wf9KVqmldnLUbVXx6r9h1UWZBqsZCyYdpFnwGZCC6deA42rX5nVYMgzx1EHPxf22VhMbFw0HmKTcvyIRmH120bntUuGQEjLZAXS6kROt0ZC46yEtl1yqnUag3PhouXY4itLCdyfDyWu8w14X7sm5Jdc",
+    //     // process.env.GATSBY_FACEBOOK_GRAPH_TOKEN,
+    //   },
+    // },
   ],
 };
