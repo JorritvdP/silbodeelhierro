@@ -52,7 +52,7 @@ module.exports = {
         },
         // Access Token from facebook
         accessToken:
-          "EAAGsy4jkkJIBALCJSdBH95TVkhevHG1LQhIPDNquYrmSlyMe3VtZCuzvZBIXq0JaWOf0DGSm1dKHfDZAdu81pR5ZBINGP1UMV2Wf9KVqmldnLUbVXx6r9h1UWZBqsZCyYdpFnwGZCC6deA42rX5nVYMgzx1EHPxf22VhMbFw0HmKTcvyIRmH120bntUuGQEjLZAXS6kROt0ZC46yEtl1yqnUag3PhouXY4itLCdyfDyWu8w14X7sm5Jdc",
+          // "EAAGsy4jkkJIBALCJSdBH95TVkhevHG1LQhIPDNquYrmSlyMe3VtZCuzvZBIXq0JaWOf0DGSm1dKHfDZAdu81pR5ZBINGP1UMV2Wf9KVqmldnLUbVXx6r9h1UWZBqsZCyYdpFnwGZCC6deA42rX5nVYMgzx1EHPxf22VhMbFw0HmKTcvyIRmH120bntUuGQEjLZAXS6kROt0ZC46yEtl1yqnUag3PhouXY4itLCdyfDyWu8w14X7sm5Jdc",
         // process.env.GATSBY_FACEBOOK_GRAPH_TOKEN,
       },
     },

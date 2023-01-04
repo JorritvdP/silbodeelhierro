@@ -2,7 +2,7 @@ import * as React from "react";
 import Banner from "../components/banner";
 import Silbadores from "../components/silbadores";
 import Navigationbar from "../components/navigationbar";
-import Facebook from "../components/facebook";
+// import Facebook from "../components/facebook";
 import Casas from "../components/casas";
 import Testimonios from "../components/testimonios";
 import Colaboracion from "../components/colaboracion";
@@ -23,7 +23,7 @@ const IndexPage = () => {
       <Navigationbar />
       <Banner />
       <div className={container}>
-        <Facebook />
+        {/* <Facebook /> */}
         <Silbadores />
         <Casas />
         <Testimonios />
