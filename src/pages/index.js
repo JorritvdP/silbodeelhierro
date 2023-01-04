@@ -12,6 +12,14 @@ import { container } from "../components/index.module.scss";
 const IndexPage = () => {
   return (
     <main>
+      <div id="fb-root"></div>
+      <script
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v15.0&appId=471465151729810&autoLogAppEvents=1"
+        nonce="E7l4K9oe"
+      ></script>
       <Navigationbar />
       <Banner />
       <div className={container}>
