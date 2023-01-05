@@ -1,4 +1,5 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 import Banner from "../components/banner";
 import Silbadores from "../components/silbadores";
 import Navigationbar from "../components/navigationbar";
@@ -8,13 +9,24 @@ import Colaboracion from "../components/colaboracion";
 import Footer from "../components/footer";
 import { container } from "../components/index.module.scss";
 
-const IndexPage = () => {
+export const query = graphql`
+  query {
+    allImageSharp {
+      nodes {
+        gatsbyImageData(width: 130)
+        id
+      }
+    }
+  }
+`;
+
+const IndexPage = ({ data }) => {
   return (
     <main>
       <Navigationbar />
       <Banner />
       <div className={container}>
-        <Silbadores />
+        <Silbadores portraits={data.allImageSharp.nodes} />
         <Casas />
         <Testimonios />
         <Colaboracion />

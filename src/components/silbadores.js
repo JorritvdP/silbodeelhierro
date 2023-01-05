@@ -1,10 +1,12 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+// import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { silbadoresContainer } from "./silbadores.module.scss";
 
 const width = "130px";
 
-const portraits = [
+const images = [
   <StaticImage
     src="../images/Vitoriano-Fidel-Padron-Gonzalez.jpg"
     alt="Vitoriano-Fidel-Padron-Gonzalez"
@@ -156,7 +158,16 @@ const portraits = [
   />,
 ];
 
-const Silbadores = () => {
+const Silbadores = (props) => {
+  const [portraits, setPortraits] = useState(props.portraits);
+  console.log(portraits);
+
+  const test = portraits.map((portrait) => {
+    const id = portrait.id;
+    console.log(portrait.gatsbyImageData);
+    const image = getImage(portrait);
+    return <GatsbyImage image={image} key={id} />;
+  });
   return (
     <div className={silbadoresContainer}>
       <h2>Silbadores actuales</h2>
@@ -164,7 +175,7 @@ const Silbadores = () => {
         Galería homenaje a los silbadores herreños que mantienen viva esta bella
         tradición
       </p>
-      <div className="p-2">{portraits}</div>
+      <div className="p-2">{test}</div>
     </div>
   );
 };
