@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-// import { useStaticQuery, graphql } from "gatsby";
+// import Modal from "react-modal";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import {
-  silbadoresContainer,
-  gridContainer,
-  photo,
-} from "./silbadores.module.scss";
+import { silbadoresContainer, photo, hover } from "./silbadores.module.scss";
 
 const width = "130px";
 
@@ -165,6 +161,7 @@ const images = [
 const Silbadores = (props) => {
   const [portraits, setPortraits] = useState(props.portraits);
   const [hovered, setHovered] = useState(false);
+  console.log(portraits);
 
   const handleClick = () => {
     console.log("click");
@@ -181,21 +178,22 @@ const Silbadores = (props) => {
         Galería homenaje a los silbadores herreños que mantienen viva esta bella
         tradición
       </p>
-      <div className="gridContainer">
-        {portraits.map((portrait) => {
+      <div>
+        {portraits.map((portrait, index) => {
           const id = portrait.id;
           console.log(portrait.gatsbyImageData);
           const image = getImage(portrait);
           return (
             <span
-              className={photo}
+              className={`${photo} ${hovered ? hover : null}`}
+              key={index}
               onClick={handleClick}
               onMouseOver={handleMouseOver}
             >
               <GatsbyImage
                 image={image}
                 key={id}
-                // style={hovered ? style : null}
+                imgStyle={{ margin: "3px" }}
               />
             </span>
           );
