@@ -24,11 +24,7 @@
   margin: 0 auto;
 }
 
-// .photo {
-//   margin-bottom: 3px;
-// }
-
-.hover {
+.photo:hover {
   cursor: pointer;
-  transform: scale(1.5, 1.5);
-};
+  opacity: 0.7;
+}

@@ -31,7 +31,7 @@ const Navigationbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Quiénes Somos</Link>
+            <Link to="/">Acerca De</Link>
           </li>
           <li>
             <Link to="/">Contacto</Link>

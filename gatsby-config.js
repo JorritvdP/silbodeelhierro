@@ -14,10 +14,9 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: `${__dirname}/src/images/`,
+        name: "silbadores",
+        path: `${__dirname}/src/images/silbadores`,
       },
-      __key: "images",
     },
     {
       resolve: `gatsby-omni-font-loader`,
