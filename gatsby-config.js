@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `silbodeelhierro`,
+    title: `Silbo de el Hierro`,
     siteUrl: `https://www.silbodeelhierro.com`,
   },
   plugins: [
@@ -15,7 +15,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "silbadores",
-        path: `${__dirname}/src/images/silbadores`,
+        path: `${__dirname}/public/static`,
       },
     },
     {

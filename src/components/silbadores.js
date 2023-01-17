@@ -160,7 +160,6 @@ import { silbadoresContainer, photo } from "./silbadores.module.scss";
 
 const Silbadores = (props) => {
   const [portraits, setPortraits] = useState(props.portraits);
-  console.log(portraits);
 
   const handleClick = () => {
     console.log("click");
@@ -175,18 +174,23 @@ const Silbadores = (props) => {
       </p>
       <div>
         {portraits.map((portrait, index) => {
-          const id = portrait.id;
+          portrait.childrenImageSharp.forEach((e) => {
+            const id = e.id;
+            console.log(id);
+          });
+
+          //
           // console.log(portrait.gatsbyImageData);
-          const image = getImage(portrait);
-          return (
-            <span className={photo} key={index} onClick={handleClick}>
-              <GatsbyImage
-                image={image}
-                key={id}
-                imgStyle={{ margin: "3px" }}
-              />
-            </span>
-          );
+          // const image = getImage(portrait);
+          // return (
+          //   <span className={photo} key={index} onClick={handleClick}>
+          //     <GatsbyImage
+          //       image={image}
+          //       key={id}
+          //       imgStyle={{ margin: "3px" }}
+          //     />
+          //   </span>
+          // );
         })}
       </div>
     </div>

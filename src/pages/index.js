@@ -11,10 +11,12 @@ import { container } from "../components/index.module.scss";
 
 export const query = graphql`
   query {
-    allImageSharp {
+    allFile {
       nodes {
-        gatsbyImageData(width: 130)
-        id
+        childrenImageSharp {
+          gatsbyImageData(width: 130)
+          id
+        }
       }
     }
   }
@@ -26,7 +28,7 @@ const IndexPage = ({ data }) => {
       <Navigationbar />
       <Banner />
       <div className={container}>
-        <Silbadores portraits={data.allImageSharp.nodes} />
+        <Silbadores portraits={data.allFile.nodes} />
         <Casas />
         <Testimonios />
         <Colaboracion />
