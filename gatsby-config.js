@@ -34,12 +34,12 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: `https://silbodeelhierro.com/graphql`,
-        // allows a fallback url if WPGRAPHQL_URL is not set in the env, this may be a local or remote WP instance.
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //     url: `https://localhost:8000/graphql`,
+    //     // allows a fallback url if WPGRAPHQL_URL is not set in the env, this may be a local or remote WP instance.
+    //   },
+    // },
   ],
 };
