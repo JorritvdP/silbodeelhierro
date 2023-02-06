@@ -9,12 +9,12 @@ import {
 } from "./navigationbar.module.scss";
 
 const Navigationbar = (props) => {
-  console.log(props);
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
     if (props.page == "quienes") {
       setScrolled(true);
+      // window.scrollTop(0, 0);
     } else {
       window.scrollY >= 380 ? setScrolled(true) : setScrolled(false);
     }
