@@ -8,11 +8,16 @@ import {
   scroll,
 } from "./navigationbar.module.scss";
 
-const Navigationbar = () => {
+const Navigationbar = (props) => {
+  console.log(props);
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-    window.scrollY >= 380 ? setScrolled(true) : setScrolled(false);
+    if (props.page == "quienes") {
+      setScrolled(true);
+    } else {
+      window.scrollY >= 380 ? setScrolled(true) : setScrolled(false);
+    }
   };
 
   useEffect(() => {
@@ -31,7 +36,7 @@ const Navigationbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Quiénes Somos</Link>
+            <Link to="/quienesSomos/">Quiénes Somos</Link>
           </li>
           <li>
             <Link to="/">Contacto</Link>
