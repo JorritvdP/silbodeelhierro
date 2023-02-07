@@ -1,14 +1,14 @@
 import React from "react";
 import { footerContainer, footerLinks, footerText } from "./footer.module.scss";
 
+const text =
+  "Síguenos en nuestras redes sociales para estar al corriente de todas las novedades";
+
 const Footer = () => {
   return (
     <div className={footerContainer}>
       <div className={footerText}>
-        <p>
-          Síguenos en nuestras redes sociales para estar al corriente de todas
-          las novedades
-        </p>
+        <p>{text}</p>
       </div>
       <div className={footerLinks}>
         <a href="https://www.instagram.com/silboherreno/" target="_blank">
