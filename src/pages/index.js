@@ -1,5 +1,6 @@
 import * as React from "react";
 import Banner from "../components/banner";
+import Facebook from "../components/facebook";
 import Silbadores from "../components/silbadores";
 import Navigationbar from "../components/navigationbar";
 import Casas from "../components/casas";
@@ -14,6 +15,7 @@ const IndexPage = () => {
       <Navigationbar />
       <Banner />
       <div className={container}>
+        <Facebook />
         <Silbadores />
         <Casas />
         <Testimonios />
