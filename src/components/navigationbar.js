@@ -28,7 +28,9 @@ const Navigationbar = (props) => {
   return (
     <div className={scrolled ? navContainer : scroll}>
       <div className={image}>
-        <StaticImage src="../images/silbo_typo_logo.png" />
+        <Link to="/">
+          <StaticImage src="../images/silbo_typo_logo.png" />
+        </Link>
       </div>
       <div className={links}>
         <ul>
