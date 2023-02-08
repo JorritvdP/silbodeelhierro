@@ -170,6 +170,7 @@ const Silbadores = ({ data }) => {
   // };
 
   useEffect(() => {
+    // TODO: Images are fetched and displayed, but quality is low. Find way to improve quality.
     const test2 = data.map((node) => {
       return (
         <GatsbyImage
