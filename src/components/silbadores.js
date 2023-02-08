@@ -1,8 +1,35 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { silbadoresContainer } from "./silbadores.module.scss";
 
 const width = "130px";
+
+// const test1 = [
+//   {
+//     src: "../images/silbador/Vitoriano-Fidel-Padron-Gonzalez.jpg",
+//     alt: "Vitoriano-Fidel-Padron-Gonzalez",
+//     width: "130px",
+//     key: 1,
+//   },
+//   {
+//     src: "../images/silbador/Vidal-Acosta-Gutierrez.jpg",
+//     alt: "Vidal-Acosta-Gutierrez",
+//     width: "130px",
+//     key: 2,
+//   },
+//   {
+//     src: "../images/silbador/Adela-Padron-Perez.jpg",
+//     alt: "Adela-Padron-Perez",
+//     width: "130px",
+//     key: 3,
+//   },
+//   {
+//     src: "../images/silbador/Andres-Gonzalez-Padron.jpg",
+//     alt: "Andres-Gonzalez-Padron",
+//     width: "130px",
+//     key: 4,
+//   },
+// ];
 
 const portraits = [
   <StaticImage
@@ -157,6 +184,35 @@ const portraits = [
 ];
 
 const Silbadores = () => {
+  const [pic, setPic] = useState([]);
+
+  const handleClick = () => {
+    console.log("click");
+    // silbador.width = "250px";
+    // setTimeout(() => {
+    //   silbador.width = "130px";
+    // }, 5000);
+  };
+
+  // const i = test1.map((silbador) => {
+  //   <img
+  //     src={silbador.src}
+  //     alt={silbador.alt}
+  //     width={silbador.width}
+  //     key={silbador.key}
+  //     onClick={handleClick(silbador)}
+  //   />;
+  // });
+  // console.log(i);
+
+  useEffect(() => {
+    setPic(portraits);
+  }, []);
+
+  useEffect(() => {
+    console.log(pic);
+  }, [pic]);
+
   return (
     <div className={silbadoresContainer}>
       <h2>Silbadores actuales</h2>
@@ -164,7 +220,20 @@ const Silbadores = () => {
         Galería homenaje a los silbadores herreños que mantienen viva esta bella
         tradición
       </p>
-      <div className="p-2">{portraits}</div>
+      <div className="p-2" onClick={handleClick()}>
+        {pic}
+        {/* {test1.map((i) => {
+          return (
+            <img
+              src={i.src}
+              alt={i.alt}
+              width={i.width}
+              key={i.key}
+              onClick={handleClick(i)}
+            />
+          );
+        })} */}
+      </div>
     </div>
   );
 };
