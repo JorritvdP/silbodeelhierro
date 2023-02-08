@@ -1,35 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import Portraits from "./queries/portraits";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { silbadoresContainer } from "./silbadores.module.scss";
 
+console.log(Portraits);
 const width = "130px";
-
-// const test1 = [
-//   {
-//     src: "../images/silbador/Vitoriano-Fidel-Padron-Gonzalez.jpg",
-//     alt: "Vitoriano-Fidel-Padron-Gonzalez",
-//     width: "130px",
-//     key: 1,
-//   },
-//   {
-//     src: "../images/silbador/Vidal-Acosta-Gutierrez.jpg",
-//     alt: "Vidal-Acosta-Gutierrez",
-//     width: "130px",
-//     key: 2,
-//   },
-//   {
-//     src: "../images/silbador/Adela-Padron-Perez.jpg",
-//     alt: "Adela-Padron-Perez",
-//     width: "130px",
-//     key: 3,
-//   },
-//   {
-//     src: "../images/silbador/Andres-Gonzalez-Padron.jpg",
-//     alt: "Andres-Gonzalez-Padron",
-//     width: "130px",
-//     key: 4,
-//   },
-// ];
 
 const portraits = [
   <StaticImage
@@ -183,35 +158,32 @@ const portraits = [
   />,
 ];
 
-const Silbadores = () => {
+const Silbadores = ({ data }) => {
   const [pic, setPic] = useState([]);
 
-  const handleClick = () => {
-    console.log("click");
-    // silbador.width = "250px";
-    // setTimeout(() => {
-    //   silbador.width = "130px";
-    // }, 5000);
-  };
-
-  // const i = test1.map((silbador) => {
-  //   <img
-  //     src={silbador.src}
-  //     alt={silbador.alt}
-  //     width={silbador.width}
-  //     key={silbador.key}
-  //     onClick={handleClick(silbador)}
-  //   />;
-  // });
-  // console.log(i);
+  // const handleClick = () => {
+  //   console.log("click");
+  //   // silbador.width = "250px";
+  //   // setTimeout(() => {
+  //   //   silbador.width = "130px";
+  //   // }, 5000);
+  // };
 
   useEffect(() => {
+    const test2 = data.map((node) => {
+      return (
+        <GatsbyImage
+          image={node.node.childImageSharp.gatsbyImageData}
+          key={node.node.childImageSharp.id}
+        />
+      );
+    });
     setPic(portraits);
   }, []);
 
-  useEffect(() => {
-    console.log(pic);
-  }, [pic]);
+  // useEffect(() => {
+  //   console.log(pic);
+  // }, [pic]);
 
   return (
     <div className={silbadoresContainer}>
@@ -220,7 +192,7 @@ const Silbadores = () => {
         Galería homenaje a los silbadores herreños que mantienen viva esta bella
         tradición
       </p>
-      <div className="p-2" onClick={handleClick()}>
+      <div className="p-2">
         {pic}
         {/* {test1.map((i) => {
           return (

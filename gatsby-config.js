@@ -11,13 +11,20 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "images",
+    //     path: path.join(__dirname, `src`, `images`),
+    //   },
+    //   __key: "images",
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: `${__dirname}/src/images/`,
+        name: "silbador",
+        path: `${__dirname}/src/images/silbador`,
       },
-      __key: "images",
     },
     {
       resolve: `gatsby-omni-font-loader`,

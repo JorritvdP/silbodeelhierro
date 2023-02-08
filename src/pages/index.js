@@ -7,14 +7,18 @@ import Testimonios from "../components/testimonios";
 import Colaboracion from "../components/colaboracion";
 import Footer from "../components/footer";
 import { container } from "../components/index.module.scss";
+import { graphql } from "gatsby";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  <pre>{JSON.stringify(data, null, 2)}</pre>;
+  const test1 = data.allFile.edges;
+  console.log(data.allFile.edges);
   return (
     <main>
       <Navigationbar />
       <Banner />
       <div className={container}>
-        <Silbadores />
+        <Silbadores data={test1} />
         <Casas />
         <Testimonios />
         <Colaboracion />
@@ -23,6 +27,21 @@ const IndexPage = () => {
     </main>
   );
 };
+
+export const query = graphql`
+  query {
+    allFile(filter: { sourceInstanceName: { eq: "silbador" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(width: 130)
+            id
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
 
