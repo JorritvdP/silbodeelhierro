@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Portraits from "./queries/portraits";
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+// import Portraits from "./queries/portraits";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import { silbadoresContainer } from "./silbadores.module.scss";
 
-console.log(Portraits);
+// console.log(Portraits);
 const width = "130px";
 
 const portraits = [
@@ -163,23 +163,25 @@ const Silbadores = ({ data }) => {
 
   // const handleClick = () => {
   //   console.log("click");
-  //   // silbador.width = "250px";
-  //   // setTimeout(() => {
-  //   //   silbador.width = "130px";
-  //   // }, 5000);
+  // silbador.width = "250px";
+  // setTimeout(() => {
+  //   silbador.width = "130px";
+  // }, 5000);
   // };
 
   useEffect(() => {
     // TODO: Images are fetched and displayed, but quality is low. Find way to improve quality.
     const test2 = data.map((node) => {
       return (
-        <GatsbyImage
-          image={node.node.childImageSharp.gatsbyImageData}
-          key={node.node.childImageSharp.id}
-        />
+        <span>
+          <GatsbyImage
+            image={node.node.childImageSharp.gatsbyImageData}
+            key={node.node.childImageSharp.id}
+          />
+        </span>
       );
     });
-    setPic(portraits);
+    setPic(test2);
   }, []);
 
   // useEffect(() => {
